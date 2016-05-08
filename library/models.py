@@ -19,6 +19,7 @@ class Book(models.Model):
     author = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
     isbn = models.CharField(max_length=200, blank=True)
+    dewey = models.CharField(max_length=200, blank=True)
     info = models.CharField(max_length=200, blank=True)
     summary = models.TextField(max_length=200, blank=True)
 
