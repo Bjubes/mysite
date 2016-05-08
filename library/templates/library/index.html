@@ -1,0 +1,12 @@
+{% extends 'library/base.html' %}
+{% block body %}
+{% if collection %}
+    <ul>
+    {% for c in collection %}
+        <li><a href="{% url 'library:detail' c.id %}">{{  c.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no collections</p>
+{% endif %}
+{% endblock %}
